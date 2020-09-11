@@ -18,8 +18,8 @@ These objects are imported from other packages. Follow the links
 below to see their documentation.
 
 \describe{
-  \item{gridExtra}{\code{\link[gridExtra]{grid.arrange}}}
+  \item{gridExtra}{\code{\link[gridExtra:arrangeGrob]{grid.arrange}}}
 
-  \item{pls}{\code{\link[pls]{R2}}, \code{\link[pls]{explvar}}, \code{\link[pls]{loadingplot}}, \code{\link[pls]{loadings}}, \code{\link[pls]{mvrValstats}}, \code{\link[pls]{scoreplot}}, \code{\link[pls]{scores}}}
+  \item{pls}{\code{\link[pls:mvrVal]{R2}}, \code{\link[pls:coef.mvr]{explvar}}, \code{\link[pls:scoreplot]{loadingplot}}, \code{\link[pls:scores]{loadings}}, \code{\link[pls:mvrVal]{mvrValstats}}, \code{\link[pls]{scoreplot}}, \code{\link[pls]{scores}}}
 }}
 

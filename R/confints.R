@@ -22,22 +22,13 @@ if(getRversion() >= "2.15.1")  utils::globalVariables(c("A", "Left", "Right"))
 #'
 #' @return An object of class \code{confints}, which holds
 #' the information needed to perform statistics or plot the
-#' confidence intervals is retunred from \code{confints}.
+#' confidence intervals is returned from \code{confints}.
 #' The plotting routine returns a ggplot structure for plotting.
 #'
 #' @import ggplot2
 #' @importFrom scales squish
 #' @importFrom gridExtra grid.arrange
 #' @export
-#'
-#' @examples
-#' data(MS)
-#' # Compare MS and non-MS patients within cluster 1
-#' conf <- with(MS, confints(proteins[MS == "yes" & cluster == 1,],
-#'                           proteins[MS == "no"  & cluster == 1,]))
-#' p1 <- plot(conf)
-#' p2 <- plot(conf, nonZero = TRUE) # Only intervals without 0.
-#' grid.arrange(p1,p2)
 confints <-function(X1, X2, confidence = 0.95, df.used = 0){
   k <- dim(X1)[2]
   A1 <- apply(X1, 2, mean, na.rm=TRUE)

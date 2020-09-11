@@ -44,26 +44,3 @@ pls(er, ...)
 \description{
 Partial Least Squares modelling of ER objects.
 }
-\examples{
-data(MS, package = "ER")
-er <- ER(proteins ~ MS * cluster, data = MS[-1,])
-
-plsMod <- pls(er, 'MS', 6, validation = "CV",
-              type = "interleaved", length.seg=25, shave = TRUE)
-# Error as a function of remaining variables
-plot(plsMod$shave)
-# Selected variables for minimum error
-with(plsMod$shave, colnames(X)[variables[[min.red+1]]])
-
-\donttest{
-plsMod <- pls(er, 'MS', 5, validation = "LOO",
-              type = "interleaved", length.seg=25, jackknife = TRUE)
-colSums(plsMod$classes == as.numeric(MS$MS[-1]))
-# Jackknifed coefficient P-values (sorted)
-plot(sort(plsMod$jack[,1,1]), pch = '.', ylab = 'P-value')
-abline(h=c(0.01,0.05),col=2:3)
-
-scoreplot(plsMod)
-}
-
-}

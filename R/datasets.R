@@ -1,34 +1,3 @@
-#' @name MS
-#' @docType data
-#' @title Multiple Sclerosis data
-#'
-#' @description A \code{data.frame} with a design and proteomic data.
-#'
-#' @usage
-#' data(MS)
-#'
-#' @details
-#' Data from biobank are analysed a study population of 101 patients, 37 were diagnosed with
-#' multiple sclerosis, and 64 without multiple sclerosis. Of the patients without multiple
-#' sclerosis, 50 were diagnosed with other neurological disorders and 14 were neurologically
-#' healthy patients who had undergone spinal anaesthesia for orthopaedic surgery on the knee
-#' or ankle, i.e. neurologically healthy controls. Unless otherwise stated, all the patients
-#' without multiple sclerosis were considered as controls for this study. All patients with
-#' multiple sclerosis had relapsing remitting multiple sclerosis. The proteome were obtained
-#' on cerebrospinal fluid samples from all patients prior medical treatment for multiple
-#' sclerosis. It was discovered the patients separated into two clusters, called cluster 1 and
-#' cluster 2. This is utilised in the data analysis by considering the data as 2-way factorial
-#' design with the two factors: MS and clusters both on two levels.
-#'
-#' @author Ellen Færgestad Mosleth
-#' @references Opsahl, J.A. et al. Label-free analysis of human cerebrospinal fluid addressing various normalization strategies and revealing protein groups affected by multiple sclerosis. Proteomics 16, 1154-1165 (2016).
-#'
-#' @examples
-#' data(MS)
-#' str(MS)
-#'
-NULL
-
 #' @name Lactobacillus
 #' @docType data
 #' @title Lactobacillus data

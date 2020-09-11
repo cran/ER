@@ -1,6 +1,6 @@
 #' @aliases elastic elastic.ER
 #' @name elastic
-#' @title Elastic-net modelling of ER objects.
+#' @title Elastic-net modeling of ER objects.
 #' @param er Object of class \code{ER}.
 #' @param effect The effect to be used as response.
 #' @param alpha The elasticnet mixing parameter.
@@ -12,13 +12,6 @@
 #' @param ... Additional arguments for \code{pls::cvsegments}.
 #'
 #' @importFrom glmnet cv.glmnet
-#' @examples
-#' data(MS, package = "ER")
-#' er <- ER(proteins ~ MS * cluster, data = MS)
-#' elasticMod <- elastic(er, 'MS', validation = "CV")
-#' sum(elasticMod$classes == MS$MS)
-#' plot(elasticMod)            # Model fit
-#' plot(elasticMod$glmnet.fit) # Coefficient trajectories
 #' @export
 elastic <- function(er, ...){
   UseMethod("elastic")

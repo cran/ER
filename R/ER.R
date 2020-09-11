@@ -25,33 +25,6 @@
 #' @references E.F. Mosleth et al. (2020) <doi:10.1016/B978-0-12-409547-2.14882-6>. Comprehensive Chemometrics, 2nd edition; Brown, S., Tauler, R., & Walczak, B. (Eds.). Chapter 4.22. Analysis of Megavariate Data in Functional Omics. Elsevier.
 #'
 #' @export
-#'
-#' @examples
-#' data(MS, package = "ER")
-#' er <- ER(proteins ~ MS * cluster, data = MS)
-#' plot(er)                                           # Raw data, first feature
-#' plot(er,2)                                         # Raw data, numbered feature
-#' plot(er,'Q76L83', col='MS', pch='cluster')         # Selected colour and plot character
-#' plot(er,'Q76L83', what='MS', model.line='cluster') # Selected model.line
-#' \donttest{
-#'   # Example compound plot
-#'   old.par <- par(c("mfrow", "mar"))
-#'   on.exit(par(old.par))
-#'   par(mfrow = c(3,3), mar = c(2,4,4,1))
-#'   plot(er,'Q76L83')                                  # Raw data, named feature
-#'   plot(er,'Q76L83', what='fits')                     # Fitted values
-#'   plot(er,'Q76L83', what='residuals')                # Residuals
-#'   plot(er,'Q76L83', what='mean MS')                  # Mean levels
-#'   plot(er,'Q76L83', what='mean cluster')             # ----||----
-#'   plot(er,'Q76L83', what='mean MS:cluster')          # ----||----
-#'   plot(er,'Q76L83', what='MS')                       # ER values
-#'   plot(er,'Q76L83', what='cluster')                  # --------||---------
-#'   plot(er,'Q76L83', what='MS:cluster')               # --------||---------
-#' }
-#'
-#' # In general there can be more than two, effects, more than two levels, and continuous effects:
-#' # MS$three <- factor(c(rep(1:3,33),1:2))
-#' # er3    <- ER(proteins ~ MS * cluster + three, data = MS)
 ER <- function(formula, data){
   # Handle formulas
   mf <- match.call(expand.dots = FALSE)                         # Bokholderi på input-navn

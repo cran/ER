@@ -3,7 +3,7 @@
 \name{elastic}
 \alias{elastic}
 \alias{elastic.ER}
-\title{Elastic-net modelling of ER objects.}
+\title{Elastic-net modeling of ER objects.}
 \usage{
 elastic(er, ...)
 
@@ -39,13 +39,5 @@ elastic(er, ...)
 \item{family}{Type of model response, default = 'multinomial'.}
 }
 \description{
-Elastic-net modelling of ER objects.
-}
-\examples{
-data(MS, package = "ER")
-er <- ER(proteins ~ MS * cluster, data = MS)
-elasticMod <- elastic(er, 'MS', validation = "CV")
-sum(elasticMod$classes == MS$MS)
-plot(elasticMod)            # Model fit
-plot(elasticMod$glmnet.fit) # Coefficient trajectories
+Elastic-net modeling of ER objects.
 }

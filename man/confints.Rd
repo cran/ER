@@ -52,18 +52,9 @@ confints(X1, X2, confidence = 0.95, df.used = 0)
 \value{
 An object of class \code{confints}, which holds
 the information needed to perform statistics or plot the
-confidence intervals is retunred from \code{confints}.
+confidence intervals is returned from \code{confints}.
 The plotting routine returns a ggplot structure for plotting.
 }
 \description{
 Confidence Intervals of Effect Differences
-}
-\examples{
-data(MS)
-# Compare MS and non-MS patients within cluster 1
-conf <- with(MS, confints(proteins[MS == "yes" & cluster == 1,],
-                          proteins[MS == "no"  & cluster == 1,]))
-p1 <- plot(conf)
-p2 <- plot(conf, nonZero = TRUE) # Only intervals without 0.
-grid.arrange(p1,p2)
 }
